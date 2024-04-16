@@ -80,7 +80,10 @@ This is the place for you to write reflections:
 
 - In the Observer pattern diagram explained by the Head First Design Pattern book, Subscriber is defined as an interface. Explain based on your understanding of Observer design patterns, do we still need an interface (or trait in Rust) in this BambangShop case, or a single Model struct is enough?
     - Kita masih bisa menerapkan pola Observer, tetapi dengan menggunakan interface, kita mendapatkan beberapa keuntungan dari segi fleksibilitas, maintaintabilitas, testibilitas sehingga, meskipun memang memungkinkan tanpa menggunakan interface, penggunaannya dapat memberikan kelebihan yang signifikan dalam pengembangan aplikasi yang kompleks.
-
+- id in Program and url in Subscriber is intended to be unique. Explain based on your understanding, is using Vec (list) sufficient or using DashMap (map/dictionary) like we currently use is necessary for this case?
+    - Kita dapat menggunakan Vec ketika datanya berukuran kecil, ketika datanya berukuran besar, maka lebih baik menggunakan DashMap karena operasi pada map memiliki kompleksitas yang lebih kecil untuk add, delete, dan search
+- When programming using Rust, we are enforced by rigorous compiler constraints to make a thread-safe program. In the case of the List of Subscribers (SUBSCRIBERS) static variable, we used the DashMap external library for thread safe HashMap. Explain based on your understanding of design patterns, do we still need DashMap or we can implement Singleton pattern instead?
+    - Mmeskipun kita dapat membuat pola Singleton di Rust, tetapi penggunaan DahsMap lebih praktis dan mudah. DashMap menjamin keamanan thread dan memiliki kinerja yang baik sehingga cocok pada aplikasi yang bersifat konkuren.
 #### Reflection Publisher-2
 
 - In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
