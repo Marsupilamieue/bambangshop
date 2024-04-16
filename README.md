@@ -65,11 +65,11 @@ You can install Postman via this website: https://www.postman.com/downloads/
     -   [x] Commit: `Implement unsubscribe function in Notification controller.`
     -   [x] Write answers of your learning module's "Reflection Publisher-2" questions in this README.
 -   **STAGE 3: Implement notification mechanism**
-    -   [ ] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
-    -   [ ] Commit: `Implement notify function in Notification service to notify each Subscriber.`
-    -   [ ] Commit: `Implement publish function in Program service and Program controller.`
-    -   [ ] Commit: `Edit Product service methods to call notify after create/delete.`
-    -   [ ] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
+    -   [x] Commit: `Implement update method in Subscriber model to send notification HTTP requests.`
+    -   [x] Commit: `Implement notify function in Notification service to notify each Subscriber.`
+    -   [x] Commit: `Implement publish function in Program service and Program controller.`
+    -   [x] Commit: `Edit Product service methods to call notify after create/delete.`
+    -   [x] Write answers of your learning module's "Reflection Publisher-3" questions in this README.
 
 ## Your Reflections
 This is the place for you to write reflections:
@@ -95,3 +95,10 @@ This is the place for you to write reflections:
 
 
 #### Reflection Publisher-3
+
+- Observer Pattern has two variations: Push model (publisher pushes data to subscribers) and Pull model (subscribers pull data from publisher). In this tutorial case, which variation of Observer Pattern that we use?
+    - Variasi yang dipakai adalah push pattern, di mana `Notification Service` menjadi objek. Setiap ada perubahan maka `Notification Service` memberitahu update ke observernya.
+- What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case? (example: if you answer Q1 with Push, then imagine if we used Pull)
+    - Keuntungannya adalah efisiensi karena pengamat hanya meminta pembaruan saat diperlukan, tetapi ini juga menambah kompleksitas tambahan dalam implementasi dan berpotensi pengamat memiliki data yang tidak up to date.
+- Explain what will happen to the program if we decide to not use multi-threading in the notification process.
+    - Tanpa menggunakan multi-threading dalam proses notifikasi, program mungkin menjadi kurang efisien dan responsif, terutama dalam kasus di mana ada banyak pengamat atau perubahan yang sering terjadi dan perlu diproses dengan cepat.
