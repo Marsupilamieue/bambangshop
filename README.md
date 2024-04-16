@@ -80,7 +80,15 @@ This is the place for you to write reflections:
 
 - In the Observer pattern diagram explained by the Head First Design Pattern book, Subscriber is defined as an interface. Explain based on your understanding of Observer design patterns, do we still need an interface (or trait in Rust) in this BambangShop case, or a single Model struct is enough?
     - Kita masih bisa menerapkan pola Observer, tetapi dengan menggunakan interface, kita mendapatkan beberapa keuntungan dari segi fleksibilitas, maintaintabilitas, testibilitas sehingga, meskipun memang memungkinkan tanpa menggunakan interface, penggunaannya dapat memberikan kelebihan yang signifikan dalam pengembangan aplikasi yang kompleks.
-    
+
 #### Reflection Publisher-2
+
+- In the Model-View Controller (MVC) compound pattern, there is no “Service” and “Repository”. Model in MVC covers both data storage and business logic. Explain based on your understanding of design principles, why we need to separate “Service” and “Repository” from a Model?
+    - Memisahkan "Service" dan "Repository" adalah praktek yang sesuai dengan beberapa prinsip desain, yaitu SRP, SoC, dan DIP sehingga kode lebih mudah dimaintain, clean code, meningkatkan pemeliharaan kode, skalabilitas, uji coba, dan fleksibilitas sistem secara keseluruhan.
+- What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+    - Complexity dari kode jelas akan meningkat. Selain itu, kode jadi sulit dibaca karna satu model akan dipenuhi oleh beberapa macam logic fungsi sehingga kode akan akan sulit untuk dimaintain dan dipahami.
+- Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+    - Postman sangat membantu waktu kita ingin mengetest apakah aplikasi kita sudah berjalan dengan baik dengan menembak endpoint yang diiginkan dan kemudian melihat hasilnya. Penggunaanya pun juga sangat mudah dan kita dapat menyimpan endpoint. Selain itu, kita juga dapat melakukan automated end point testing.
+
 
 #### Reflection Publisher-3
